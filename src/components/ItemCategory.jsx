@@ -1,4 +1,5 @@
 import React from 'react'
+import ItemList from './ItemList'
 
 const ItemCategory = (props) => {
     const {category}=props
@@ -10,7 +11,7 @@ const ItemCategory = (props) => {
             <h1 className='px-10 font-semibold'>{category.card.card.title}</h1>
             {
               category.card.card.itemCards.map(i=>{
-                return <h2 className='px-3 py-2'>{i.card.info.name}</h2>
+                return <ItemList item={i}/>
               })
             }
         </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ResCard from "./ResCard";
+import { Spinner } from '@material-tailwind/react'
 
 const ResContainer = () => {
   const [resdata, setResData] = useState([]);
@@ -41,10 +42,13 @@ const ResContainer = () => {
     );
     setResData(result);
   };
+
+  
+
   return (
     <>
       {isLoading ? (
-        "Loading..."
+        <div className='text-2xl text-center m-[50%]'><Spinner/></div>
       ) : (
         <>
           <div className="mx-[30%]">
